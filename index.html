@@ -2,254 +2,76 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Enigma Diário: A Jornada do Tesouro Perdido</title>
+    <title>Enigma Diário: O Mistério da Mansão da Serra</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Fonte Google -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <!-- Ícones Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTTXvw6jffPqRfyHfLrK91T+hF3VjN9Jjz1JwIccPU4IvZc9dTRWYXxjtYqFplV3VJnQJ2S/ZA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        /* Reset CSS */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Variáveis de Cores */
-        :root {
-            --primary-color: #1e1e1e;
-            --secondary-color: #2e2e2e;
-            --accent-color: #ffcc00;
-            --success-color: #4CAF50;
-            --error-color: #f44336;
-            --background-color: #121212;
-            --text-color: #f0f0f0;
-            --button-hover: #e6b800;
-            --font-family: 'Roboto', sans-serif;
-        }
-
-        body {
-            font-family: var(--font-family);
-            background-color: var(--background-color);
-            color: var(--text-color);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 900px;
-            background-color: var(--secondary-color);
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-            animation: fadeIn 1s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        h1, h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: var(--accent-color);
-        }
-
-        h3 {
-            margin-bottom: 15px;
-            color: var(--accent-color);
-        }
-
-        .phase {
-            display: none;
-            animation: slideIn 0.5s ease-in-out;
-        }
-
-        .phase.active {
-            display: block;
-        }
-
-        @keyframes slideIn {
-            from { opacity: 0; transform: translateX(50px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-
-        .pista {
-            background-color: var(--primary-color);
-            padding: 15px;
-            border-left: 5px solid var(--accent-color);
-            margin-bottom: 20px;
-            border-radius: 4px;
-        }
-
-        .pista strong {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .input-group {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 15px;
-        }
-
-        .input-group label {
-            margin-bottom: 5px;
-            font-weight: 700;
-        }
-
-        .input-group input {
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            font-size: 1rem;
-        }
-
-        .input-group input:focus {
-            outline: none;
-            box-shadow: 0 0 5px var(--accent-color);
-        }
-
-        .button {
-            background-color: var(--accent-color);
-            color: var(--primary-color);
-            border: none;
-            padding: 12px 20px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 1rem;
-            font-weight: 700;
-            transition: background-color 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .button:hover {
-            background-color: var(--button-hover);
-        }
-
-        .button i {
-            margin-left: 8px;
-        }
-
-        .feedback {
-            margin-top: 10px;
-            padding: 12px;
-            border-radius: 4px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-        }
-
-        .feedback.correct {
-            background-color: var(--success-color);
-            color: #fff;
-        }
-
-        .feedback.incorrect {
-            background-color: var(--error-color);
-            color: #fff;
-        }
-
-        .feedback i {
-            margin-right: 8px;
-        }
-
-        .recompensa {
-            display: none;
-            text-align: center;
-            padding: 20px;
-            background-color: var(--primary-color);
-            border-left: 5px solid #00ccff;
-            border-radius: 4px;
-            animation: fadeIn 1s ease-in-out;
-        }
-
-        .recompensa h3 {
-            margin-bottom: 15px;
-            color: #00ccff;
-        }
-
-        .progress-container {
-            background-color: var(--primary-color);
-            border-radius: 20px;
-            overflow: hidden;
-            margin-bottom: 25px;
-        }
-
-        .progress-bar {
-            height: 20px;
-            width: 0%;
-            background-color: var(--accent-color);
-            transition: width 0.4s ease;
-        }
-
-        /* Responsividade */
-        @media (max-width: 600px) {
-            .container {
-                padding: 20px;
-            }
-
-            .button {
-                width: 100%;
-            }
-        }
-    </style>
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <h1>Enigma Diário</h1>
-        <h2>A Jornada do Tesouro Perdido</h2>
+        <h2>O Mistério da Mansão da Serra</h2>
 
         <!-- Barra de Progresso -->
         <div class="progress-container">
             <div class="progress-bar" id="progressBar"></div>
         </div>
 
-        <!-- Fase 1 -->
+        <!-- Fase 1: Introdução -->
         <div id="fase1" class="phase active">
-            <h3>Fase 1: O Mapa Escondido</h3>
-            <p>Os exploradores descobriram que o mapa para o tesouro está dividido em três partes, cada uma escondida em um local diferente. A primeira parte do mapa está escondida em um antigo manuscrito.</p>
+            <h3>Fase 1: O Crime na Mansão</h3>
+            <p>Na noite de 10 de junho de 2025, durante uma elegante festa na Mansão da Serra em Cascais, um crime chocou todos os presentes. Eduardo Martins, um renomado empresário no ramo imobiliário, foi encontrado morto em seu escritório privado.</p>
             <div class="pista">
-                <strong>Pista:</strong> "Onde as palavras dançam e os números cantam, o primeiro fragmento se encontra entre linhas."
+                <strong>Detalhes do Crime:</strong>
+                <ul>
+                    <li>Hora: 23:45</li>
+                    <li>Local: Escritório Privado</li>
+                    <li>Modo de Morte: Envenenamento</li>
+                </ul>
             </div>
-            <div class="input-group">
-                <label for="resposta1">Sua Resposta:</label>
-                <input type="text" id="resposta1" placeholder="Digite sua resposta aqui">
-            </div>
-            <button class="button" onclick="verificarFase1()">Enviar <i class="fas fa-paper-plane"></i></button>
-            <div id="feedback1" class="feedback" style="display:none;"></div>
+            <p>Os convidados estão intrigados, e cabe a você desvendar quem é o culpado por trás deste assassinato. Preste atenção às pistas que serão reveladas em cada fase.</p>
+            <button class="button" onclick="iniciarInvestigacao()">Iniciar <i class="fas fa-arrow-right"></i></button>
         </div>
 
-        <!-- Fase 2 -->
+        <!-- Fase 2: As Pistas Iniciais -->
         <div id="fase2" class="phase">
-            <h3>Fase 2: A Biblioteca Secreta</h3>
-            <p>Ao decifrar a pista da Fase 1, os exploradores identificaram que a primeira parte do mapa está escondida na Biblioteca Central, dentro do livro "O Código Perdido". No livro, há uma página marcada que contém um código numérico.</p>
+            <h3>Fase 2: As Pistas Iniciais</h3>
+            <p>Durante a investigação inicial, foram encontradas algumas pistas importantes no local do crime:</p>
             <div class="pista">
-                <strong>Código:</strong> <code>19 - 5 - 3 - 18 - 5 - 20 - 5</code>
+                <strong>Pistas Encontradas:</strong>
+                <ul>
+                    <li>Copo de vinho vazio no chão.</li>
+                    <li>Uma nota manuscrita com a frase: "O passado sempre retorna".</li>
+                    <li>Um relógio de pulso quebrado perto do corpo.</li>
+                </ul>
             </div>
+            <p>Analise as pistas acima para avançar na investigação.</p>
             <div class="input-group">
-                <label for="resposta2">Sua Resposta:</label>
+                <label for="resposta2">Qual foi o método de assassinato utilizado em Eduardo Martins?</label>
                 <input type="text" id="resposta2" placeholder="Digite sua resposta aqui">
             </div>
             <button class="button" onclick="verificarFase2()">Enviar <i class="fas fa-paper-plane"></i></button>
             <div id="feedback2" class="feedback" style="display:none;"></div>
         </div>
 
-        <!-- Fase 3 -->
+        <!-- Fase 3: Os Suspeitos -->
         <div id="fase3" class="phase">
-            <h3>Fase 3: O Cofre Misterioso</h3>
-            <p>O código decifrado revela a palavra "SECRET". Na Biblioteca, há um cofre antigo com uma combinação alfanumérica que precisa ser aberta para acessar a segunda parte do mapa.</p>
+            <h3>Fase 3: Os Suspeitos</h3>
+            <p>Com base nas pistas encontradas, os investigadores identificaram quatro suspeitos principais:</p>
             <div class="pista">
-                <strong>Pista para a Combinação:</strong> "A soma das letras em SECRET e o número de letras multiplicado por dois."
+                <strong>Suspeitos:</strong>
+                <ul>
+                    <li><strong>Clara Martins:</strong> Esposa de Eduardo, conhecida por sua discrição e recente conflitos conjugais.</li>
+                    <li><strong>Ricardo Silva:</strong> Sócio de Eduardo, com quem teve desentendimentos sobre a gestão da empresa.</li>
+                    <li><strong>Sofia Almeida:</strong> Assistente pessoal de Eduardo, sempre leal, mas com conhecimentos avançados em química.</li>
+                    <li><strong>Henrique Costa:</strong> Amigo de infância de Eduardo, que recentemente enfrentava dificuldades financeiras.</li>
+                </ul>
             </div>
+            <p>Quem, entre os suspeitos, você acredita ser o culpado?</p>
             <div class="input-group">
                 <label for="resposta3">Sua Resposta:</label>
                 <input type="text" id="resposta3" placeholder="Digite sua resposta aqui">
@@ -258,13 +80,19 @@
             <div id="feedback3" class="feedback" style="display:none;"></div>
         </div>
 
-        <!-- Fase 4 -->
+        <!-- Fase 4: A Verdadeira Motiva -->
         <div id="fase4" class="phase">
-            <h3>Fase 4: O Enigma Final</h3>
-            <p>Com as duas primeiras partes do mapa reunidas, os exploradores localizam a terceira parte no Jardim Botânico, sob a estátua do leão. No mapa completo, há um enigma que deve ser resolvido para encontrar a localização exata do tesouro.</p>
+            <h3>Fase 4: A Verdadeira Motiva</h3>
+            <p>Após aprofundar a investigação, surgiram mais detalhes sobre as relações entre Eduardo e os suspeitos:</p>
             <div class="pista">
-                <strong>Enigma:</strong> "Na sombra onde o sol se põe, encontre o ponto onde os ventos se encontram. Contando os passos do norte ao sul, você descobrirá o local final."
+                <strong>Detalhes Adicionais:</strong>
+                <ul>
+                    <li>O copo de vinho continha um veneno raro, obtido através de contatos de Sofia.</li>
+                    <li>A nota manuscrita sugere um motivo pessoal ligado a eventos do passado.</li>
+                    <li>O relógio de pulso quebrado pertence a Henrique, que estava ausente no momento do crime.</li>
+                </ul>
             </div>
+            <p>Considerando essas novas informações, qual é sua conclusão final sobre o culpado?</p>
             <div class="input-group">
                 <label for="resposta4">Sua Resposta:</label>
                 <input type="text" id="resposta4" placeholder="Digite sua resposta aqui">
@@ -273,94 +101,145 @@
             <div id="feedback4" class="feedback" style="display:none;"></div>
         </div>
 
-        <!-- Recompensa -->
-        <div id="recompensa" class="recompensa">
+        <!-- Fase 5: O Testamento Misterioso -->
+        <div id="fase5" class="phase">
+            <h3>Fase 5: O Testamento Misterioso</h3>
+            <p>Durante a busca no escritório, os investigadores encontraram um testamento recentemente escrito por Eduardo. O documento contém informações criptografadas que parecem apontar para o verdadeiro culpado.</p>
+            <div class="pista">
+                <strong>Testamento Criptografado:</strong>
+                <p>"Noite das estrelas, refletida na água, onde o leão encontra seu fim."</p>
+            </div>
+            <p>Decifre a mensagem para descobrir mais sobre o assassinato.</p>
+            <div class="input-group">
+                <label for="resposta5">Qual a interpretação correta do testamento criptografado?</label>
+                <input type="text" id="resposta5" placeholder="Digite sua resposta aqui">
+            </div>
+            <button class="button" onclick="verificarFase5()">Enviar <i class="fas fa-paper-plane"></i></button>
+            <div id="feedback5" class="feedback" style="display:none;"></div>
+        </div>
+
+        <!-- Fase 6: O Cofre Escondido -->
+        <div id="fase6" class="phase">
+            <h3>Fase 6: O Cofre Escondido</h3>
+            <p>A decifração do testamento levou os investigadores a descobrir um cofre escondido no porão da mansão. O cofre está trancado e requer uma combinação de quatro dígitos para ser aberto.</p>
+            <div class="pista">
+                <strong>Indicadores para a Combinação:</strong>
+                <ul>
+                    <li>A hora em que Eduardo foi morto: 23:45.</li>
+                    <li>O número de suspeitos identificados: 4.</li>
+                    <li>A quantidade de letras no nome do culpado.</li>
+                    <li>O ano em que Eduardo fundou sua empresa: 2005.</li>
+                </ul>
+            </div>
+            <p>Utilize os indicadores acima para descobrir a combinação correta do cofre.</p>
+            <div class="input-group">
+                <label for="resposta6">Qual é a combinação do cofre?</label>
+                <input type="text" id="resposta6" placeholder="Digite a combinação de 4 dígitos">
+            </div>
+            <button class="button" onclick="verificarFase6()">Enviar <i class="fas fa-paper-plane"></i></button>
+            <div id="feedback6" class="feedback" style="display:none;"></div>
+        </div>
+
+        <!-- Fase 7: O Cofre Aberto -->
+        <div id="fase7" class="phase">
+            <h3>Fase 7: O Cofre Aberto</h3>
+            <p>Com a combinação correta, o cofre foi aberto, revelando uma coleção de diários pessoais de Eduardo e um pendrive com dados importantes.</p>
+            <div class="pista">
+                <strong>Conteúdo Encontrado:</strong>
+                <ul>
+                    <li>Diário 1: Detalhes sobre as desavenças com Ricardo.</li>
+                    <li>Diário 2: Conversas confidenciais com Henrique sobre dívidas.</li>
+                    <li>Pendrive: Registros de chamadas e emails entre Eduardo e Sofia.</li>
+                </ul>
+            </div>
+            <p>Analise os diários e os registros para identificar evidências que comprovem o culpado.</p>
+            <div class="input-group">
+                <label for="resposta7">Qual evidência no pendrive é crucial para resolver o mistério?</label>
+                <input type="text" id="resposta7" placeholder="Digite sua resposta aqui">
+            </div>
+            <button class="button" onclick="verificarFase7()">Enviar <i class="fas fa-paper-plane"></i></button>
+            <div id="feedback7" class="feedback" style="display:none;"></div>
+        </div>
+
+        <!-- Fase 8: A Última Revelação -->
+        <div id="fase8" class="phase">
+            <h3>Fase 8: A Última Revelação</h3>
+            <p>Com todas as evidências reunidas, os investigadores estão prontos para confrontar o verdadeiro culpado.</p>
+            <div class="pista">
+                <strong>Detalhes Cruciais:</strong>
+                <ul>
+                    <li>Ricardo estava ausente no momento do crime devido a uma reunião falsa.</li>
+                    <li>Henrique tinha acesso ao veneno utilizado no assassinato.</li>
+                    <li>Sofia possuía habilidades químicas para preparar o veneno.</li>
+                    <li>Clara estava sob intenso estresse devido a problemas conjugais.</li>
+                </ul>
+            </div>
+            <p>Faça suas afirmações finais e determine quem é o verdadeiro culpado, qual foi o motivo e o método utilizado.</p>
+            <div class="input-group">
+                <label for="culpadoFinal">Quem é o culpado?</label>
+                <select id="culpadoFinal">
+                    <option value="">Selecione uma opção</option>
+                    <option value="Clara Martins">Clara Martins</option>
+                    <option value="Ricardo Silva">Ricardo Silva</option>
+                    <option value="Sofia Almeida">Sofia Almeida</option>
+                    <option value="Henrique Costa">Henrique Costa</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="motivoFinal">Qual foi o motivo?</label>
+                <select id="motivoFinal">
+                    <option value="">Selecione uma opção</option>
+                    <option value="Vingança por demissão injusta">Vingança por demissão injusta</option>
+                    <option value="Ganância financeira">Ganância financeira</option>
+                    <option value="Ciúmes conjugais">Ciúmes conjugais</option>
+                    <option value="Dívidas financeiras">Dívidas financeiras</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="metodoFinal">Qual foi o método utilizado?</label>
+                <select id="metodoFinal">
+                    <option value="">Selecione uma opção</option>
+                    <option value="Envenenamento">Envenenamento</option>
+                    <option value="Arma de Fogo">Arma de Fogo</option>
+                    <option value="Estrangulamento">Estrangulamento</option>
+                    <option value="Arrombamento e golpe de faca">Arrombamento e golpe de faca</option>
+                </select>
+            </div>
+            <button class="button" onclick="verificarFase8()">Enviar <i class="fas fa-paper-plane"></i></button>
+            <div id="feedback8" class="feedback" style="display:none;"></div>
+        </div>
+
+        <!-- Fase 9: O Confronto Final -->
+        <div id="fase9" class="phase">
+            <h3>Fase 9: O Confronto Final</h3>
+            <p>Com as conclusões feitas, é hora de confrontar o culpado e desvendar o mistério por completo.</p>
+            <div class="pista">
+                <strong>Revelações:</strong>
+                <ul>
+                    <li>Sofia Almeida e Henrique Costa tinham uma parceria secreta para desviar fundos da empresa.</li>
+                    <li>Clara Martins descobriu as atividades ilegais e ameaçou denunciar Eduardo.</li>
+                    <li>Ricardo Silva estava tentando expandir os negócios sem o consentimento de Eduardo.</li>
+                </ul>
+            </div>
+            <p>Com base em todas as evidências, confirme sua conclusão final.</p>
+            <div class="input-group">
+                <label for="confirmacaoFinal">Confirme sua conclusão final:</label>
+                <textarea id="confirmacaoFinal" rows="4" placeholder="Descreva sua conclusão aqui..."></textarea>
+            </div>
+            <button class="button" onclick="verificarFase9()">Enviar <i class="fas fa-paper-plane"></i></button>
+            <div id="feedback9" class="feedback" style="display:none;"></div>
+        </div>
+
+        <!-- Recompensa Final -->
+        <div id="recompensaFinal" class="recompensa">
             <h3>Parabéns!</h3>
-            <p>Você completou todas as fases do enigma e encontrou o tesouro perdido!</p>
-            <p class="fase-concluida">Recompensa: 500 pontos + Prêmio Especial Surpresa!</p>
+            <p>Você completou todas as fases do enigma e resolveu o mistério!</p>
+            <p class="fase-concluida">Recompensa: 1000 pontos + Prêmio Especial Surpresa!</p>
+            <button class="button" onclick="reiniciar()">Reiniciar Enigma <i class="fas fa-redo"></i></button>
         </div>
     </div>
 
-    <script>
-        // Seletores de Fases e Progress Bar
-        const fases = ['fase1', 'fase2', 'fase3', 'fase4'];
-        const progressBar = document.getElementById('progressBar');
-        let progresso = 0;
-
-        // Função para atualizar a barra de progresso
-        function atualizarProgressBar() {
-            progresso += 25;
-            progressBar.style.width = progresso + '%';
-        }
-
-        // Função para exibir feedback
-        function exibirFeedback(id, tipo, mensagem) {
-            const feedback = document.getElementById(id);
-            feedback.className = `feedback ${tipo}`;
-            feedback.innerHTML = `<i class="${tipo === 'correct' ? 'fas fa-check-circle' : 'fas fa-times-circle'}"></i> ${mensagem}`;
-            feedback.style.display = 'flex';
-            setTimeout(() => {
-                feedback.style.display = 'none';
-            }, 5000);
-        }
-
-        // Função para transitar entre fases
-        function transitarParaFaseAtual(atual, proxima) {
-            document.getElementById(atual).classList.remove('active');
-            document.getElementById(proxima).classList.add('active');
-            atualizarProgressBar();
-        }
-
-        // Verificação das Fases
-        function verificarFase1() {
-            const resposta = document.getElementById('resposta1').value.trim().toLowerCase();
-            if (resposta === 'sala de música' || resposta === 'sala de musica' || resposta === 'salade música') {
-                exibirFeedback('feedback1', 'correct', 'Correto! A primeira parte do mapa está na Sala de Música da Biblioteca.');
-                transitarParaFaseAtual('fase1', 'fase2');
-            } else {
-                exibirFeedback('feedback1', 'incorrect', 'Resposta incorreta. Tente novamente!');
-            }
-        }
-
-        function verificarFase2() {
-            const resposta = document.getElementById('resposta2').value.trim().toUpperCase();
-            if (resposta === 'SECRET') {
-                exibirFeedback('feedback2', 'correct', 'Correto! A palavra decifrada é "SECRET".');
-                transitarParaFaseAtual('fase2', 'fase3');
-            } else {
-                exibirFeedback('feedback2', 'incorrect', 'Resposta incorreta. Tente novamente!');
-            }
-        }
-
-        function verificarFase3() {
-            const resposta = document.getElementById('resposta3').value.trim();
-            const secret = 'SECRET';
-            let soma = 0;
-            for (let char of secret) {
-                soma += char.charCodeAt(0) - 64; // A=1, B=2, ..., Z=26
-            }
-            const multiplicado = secret.length * 2;
-            const combinacaoCorreta = `${soma}-${multiplicado}`;
-
-            if (resposta === combinacaoCorreta) {
-                exibirFeedback('feedback3', 'correct', `Correto! A combinação do cofre está correta: ${combinacaoCorreta}.`);
-                transitarParaFaseAtual('fase3', 'fase4');
-            } else {
-                exibirFeedback('feedback3', 'incorrect', `Resposta incorreta. A combinação correta era ${combinacaoCorreta}.`);
-            }
-        }
-
-        function verificarFase4() {
-            const resposta = document.getElementById('resposta4').value.trim().toLowerCase();
-            if (resposta === 'área oeste' || resposta === 'area oeste' || resposta === 'oeste' || resposta === 'área') {
-                exibirFeedback('feedback4', 'correct', 'Correto! Você encontrou o local final do tesouro.');
-                document.getElementById('fase4').classList.remove('active');
-                document.getElementById('recompensa').style.display = 'block';
-                atualizarProgressBar();
-            } else {
-                exibirFeedback('feedback4', 'incorrect', 'Resposta incorreta. Tente novamente!');
-            }
-        }
-    </script>
+    <!-- Script JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
